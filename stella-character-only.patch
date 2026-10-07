@@ -1,0 +1,24 @@
+diff --git a/renderer.js b/renderer.js
+--- a/renderer.js
++++ b/renderer.js
+@@ -214,7 +214,7 @@
+       gl.viewport(0,0,this.canvas.width,this.canvas.height);gl.clearColor(bg[0],bg[1],bg[2],1);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);gl.useProgram(this.program);
+       const aspect=this.canvas.width/this.canvas.height,eye=this.mobile?[0,1.0,12.8]:[0,1.0,10.8],target=this.mobile?[0,.5,0]:[0,.45,0];this.viewAspect=aspect;
+       this.viewProjection=m4Multiply(perspective(this.mobile?.70:.62,aspect,.1,40),lookAt(eye,target,[0,1,0]));gl.uniformMatrix4fv(this.loc.vp,false,this.viewProjection);gl.uniform3fv(this.loc.light,new Float32Array([-.45,.85,.65]));gl.uniform3fv(this.loc.fog,bg);
+-      if(this.scene==="scale")this.sceneScale(this.local);else if(this.scene==="systems")this.sceneSystems(this.local);else if(this.scene==="experiments")this.sceneExperiments(this.local);else if(this.scene==="transfer")this.sceneTransfer(this.local);else if(this.scene==="leadership")this.sceneLeadership(this.local);else this.sceneContact(this.local);
++      this.avatar();
+       const dt=performance.now()-start;if(!this.reduced){this.frames.push(dt);if(this.frames.length>90)this.frames.shift();if(this.frames.length===90&&this.frames.reduce((a,b)=>a+b,0)/90>22)this.quality="low";}
+     }
+     start(){if(this.running||this.reduced||this.destroyed)return;this.running=true;const loop=(t)=>{if(!this.running)return;this.render(t);this.raf=requestAnimationFrame(loop);};this.raf=requestAnimationFrame(loop);}
+diff --git a/styles.css b/styles.css
+--- a/styles.css
++++ b/styles.css
+@@ -53,7 +53,7 @@
+ .world-fallback { display: none; position: absolute; inset: 0; overflow: hidden; background: var(--paper); }
+ body[data-scene="systems"] .world-fallback, body[data-scene="transfer"] .world-fallback { background: var(--ink); }
+ body[data-scene="leadership"] .world-fallback { background: var(--sky); }
+-.world-fallback > span { position: absolute; height: 18px; background: rgba(175, 203, 218, .68); transform: rotate(-3deg); }
++.world-fallback > span { display: none; }
+ .world-fallback > span:nth-child(1) { width: 43%; top: 25%; left: 7%; }
+ .world-fallback > span:nth-child(2) { width: 54%; top: 35%; left: 18%; background: rgba(63, 166, 106, .62); }
+ .world-fallback > span:nth-child(3) { width: 36%; top: 55%; left: 8%; }

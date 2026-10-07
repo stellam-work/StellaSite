@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Stella Mortarotti - mathematics, computer science, research engineering and AI transformation.">
+  <title>Stella Mortarotti - Tech Portfolio</title>
+  <link rel="preload" href="assets/stella-shoreline-poster.jpg" as="image" media="(min-width: 641px)">
+  <link rel="preload" href="assets/stella-shoreline-poster-mobile.jpg" as="image" media="(max-width: 640px)">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#systems">Skip to Stella's experience</a>
+
+  <main>
+    <section class="hero" id="home" aria-labelledby="heroTitle">
+      <picture class="hero-poster" aria-hidden="true">
+        <source media="(max-width: 640px)" srcset="assets/stella-shoreline-poster-mobile.jpg">
+        <img src="assets/stella-shoreline-poster.jpg" alt="">
+      </picture>
+      <video class="hero-video" id="heroVideo" muted autoplay loop playsinline preload="metadata" poster="assets/stella-shoreline-poster.jpg" aria-hidden="true">
+        <source media="(max-width: 640px)" src="assets/stella-shoreline-loop-mobile.mp4" type="video/mp4">
+        <source src="assets/stella-shoreline-loop.webm" type="video/webm">
+        <source src="assets/stella-shoreline-loop.mp4" type="video/mp4">
+      </video>
+      <div class="hero-identity">
+        <h1 class="hero-name" id="heroTitle" aria-label="Stella Mortarotti"><span id="typedName" aria-hidden="true">STELLA MORTAROTTI</span></h1>
+        <nav class="hero-socials" aria-label="Stella's profiles">
+          <a href="https://it.linkedin.com/in/stella-mortarotti" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/stellam-work" target="_blank" rel="noopener noreferrer">GitHub · Work <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/stella-mj" target="_blank" rel="noopener noreferrer">GitHub · Personal <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+      <a class="scroll-cue" href="#systems"><span>Chapter 01</span><i aria-hidden="true"></i></a>
+    </section>
+
+    <nav class="chapter-rail" id="chapterRail" aria-label="Portfolio chapters">
+      <a href="#home">Stella Mortarotti</a>
+      <span class="rail-status" aria-hidden="true"><i id="railProgress"></i></span>
+      <a href="#systems" data-section="systems">01 · AI transformation</a>
+      <a href="#scale" data-section="scale">02 · Quantitative systems</a>
+      <a href="#experiments" data-section="experiments">03 · Stable Diffusion</a>
+      <a href="#transfer" data-section="transfer">04 · Transfer</a>
+      <a href="#leadership" data-section="leadership">05 · Leadership</a>
+      <a href="#contact" data-section="contact">06 · Contact</a>
+    </nav>
+
+    <div class="world" id="world" aria-hidden="true">
+      <canvas id="worldCanvas"></canvas>
+      <div class="character-track"><i id="characterTrackFill"></i></div>
+      <div class="world-fallback" id="worldFallback">
+        <span></span><span></span><span></span><span></span><span></span>
+        <picture><img id="fallbackCharacter" src="assets/avatar/frames/frame-054.webp" alt=""></picture>
+      </div>
+    </div>
+
+    <div class="story" id="story">
+      <section class="scene scene-dark" id="systems" data-scene="systems" aria-labelledby="systemsTitle">
+        <div class="scene-copy align-right">
+          <p class="scene-index">01 · Systems</p>
+          <h2 id="systemsTitle">Fitting the latest AI<br>to the real world</h2>
+          <p class="role">Candide · AI Transformation Specialist · 2026–Present</p>
+          <p>Turning manual processes into Power Automate pipelines; contributing to data-infrastructure restructuring and BigQuery migration; prototyping AI applications and forecasting; deploying an internal AI training programme.</p>
+          <button class="evidence-button light-button" type="button" data-open-evidence="candide">View evidence</button>
+        </div>
+        <div class="motion-beat" aria-hidden="true"><span>Arrive</span><span>Trace</span><span>Resolve</span></div>
+      </section>
+
+      <section class="scene scene-light" id="scale" data-scene="scale" aria-labelledby="scaleTitle">
+        <div class="scene-copy align-left">
+          <p class="scene-index">02 · Scale</p>
+          <h2 id="scaleTitle">Quantitative systems,<br>precise and at scale.</h2>
+          <p class="role">G-Research · Research Engineering Intern · 2025</p>
+          <div class="proof-line" aria-label="Key results">
+            <strong>1B+ rows</strong><span>2–3 TiB daily</span><span>95% less persistent storage</span>
+          </div>
+          <p>Python GPU flows processed correlation statistics across international trading venues and stocks, with monitoring for anomalies and P&amp;L reliability.</p>
+          <button class="evidence-button" type="button" data-open-evidence="gresearch">View evidence</button>
+        </div>
+        <div class="motion-beat" aria-hidden="true"><span>Ingest</span><span>Condense</span><span>Monitor</span></div>
+      </section>
+
+      <section class="scene scene-paper" id="experiments" data-scene="experiments" aria-labelledby="experimentsTitle">
+        <div class="credential-rail" aria-label="Education">
+          <span>University of St Andrews</span><span>BSc (Hons) Mathematics &amp; Computer Science</span><strong>First Class · 2026</strong>
+        </div>
+        <div class="scene-copy align-left">
+          <p class="scene-index">03 · Stable Diffusion</p>
+          <h2 id="experimentsTitle">Test what happens<br>when models feed themselves.</h2>
+          <p class="role">Joint Honours Thesis · Model Collapse in DDPM Models</p>
+          <p>Designed experiments around Markov chains, Gaussian noise and recursive synthetic training to examine model performance and output quality.</p>
+          <a class="thesis-link evidence-button" href="assets/stella-mortarotti-thesis.pdf" target="_blank" rel="noopener">Read my thesis <span aria-hidden="true">↗</span></a>
+          <button class="evidence-button" type="button" data-open-evidence="thesis">View evidence</button>
+        </div>
+        <div class="motion-beat" aria-hidden="true"><span>Seed</span><span>Recurse</span><span>Compare</span></div>
+      </section>
+
+      <section class="scene scene-ink" id="transfer" data-scene="transfer" aria-labelledby="transferTitle">
+        <div class="scene-copy align-right">
+          <p class="scene-index">04 · Transfer</p>
+          <h2 id="transferTitle">One method.<br>Three domains.</h2>
+          <div class="transfer-list">
+            <div><span>Legal data</span><strong>Jina AI API → NLP pipeline</strong><small>QMIND · 2024–25</small></div>
+            <div><span>Biochemical research</span><strong>Python + Snakemake → ~45% less manual input</strong><small>StARIS · 2024</small></div>
+            <div><span>Constraint programming</span><strong>Permutation Problem → live visualisation</strong><small>VIP / ConjureOxide · 2023–24</small></div>
+          </div>
+          <button class="evidence-button light-button" type="button" data-open-evidence="transfer">View evidence</button>
+        </div>
+        <div class="motion-beat" aria-hidden="true"><span>Translate</span><span>Apply</span><span>Connect</span></div>
+      </section>
+
+      <section class="scene scene-sky" id="leadership" data-scene="leadership" aria-labelledby="leadershipTitle">
+        <div class="scene-copy align-left">
+          <p class="scene-index">05 · Leadership</p>
+          <h2 id="leadershipTitle">Align people<br>and constraints.</h2>
+          <p class="role">The Roosevelt Group · President · 2025–26</p>
+          <p>Led a student think tank across diverse backgrounds and political alignments, publishing the New Annales Journal and increasing the recruitment rate by <strong>40%</strong>.</p>
+          <p class="role second-role">Fingask Festival · Chief Financial Officer · 2026</p>
+          <p>Managed finance across digital, creative, entertainment and logistics, including responsibility for the charity branch and OSCR regulation.</p>
+          <button class="evidence-button" type="button" data-open-evidence="leadership">View evidence</button>
+        </div>
+        <div class="motion-beat dark-beat" aria-hidden="true"><span>Gather</span><span>Coordinate</span><span>Acknowledge</span></div>
+      </section>
+
+      <section class="scene contact-scene" id="contact" data-scene="contact" aria-labelledby="contactTitle">
+        <div class="contact-block">
+          <p class="scene-index">06 · Contact</p>
+          <h2 id="contactTitle">Let’s put the signal<br>to work.</h2>
+          <a class="email-link" href="mailto:stellamortarotti@gmail.com">Email Stella</a>
+          <button class="evidence-button" type="button" data-open-evidence="index">Open full evidence index</button>
+        </div>
+        <footer><a href="#home">Back to shore ↑</a></footer>
+      </section>
+    </div>
+  </main>
+
+  <dialog class="evidence-dialog" id="evidenceDialog" aria-labelledby="evidenceTitle">
+    <div class="dialog-bar">
+      <p>CV evidence</p>
+      <button type="button" id="closeEvidence" aria-label="Close evidence">×</button>
+    </div>
+    <div class="dialog-content" id="evidenceContent"></div>
+  </dialog>
+
+  <div class="debug" id="debug" hidden></div>
+  <noscript><p class="noscript">Motion needs JavaScript; every role and result remains available in the page.</p></noscript>
+  <script src="renderer.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
